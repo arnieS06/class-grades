@@ -3,5 +3,4 @@
 
 int highestScore(int studentScores[]);
 
-
 #endif 
