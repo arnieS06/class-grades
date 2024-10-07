@@ -13,16 +13,38 @@ int main() {
     // sort the array from largest to smallest values
     sort(studentScores, studentScores + 30);
 
-    cout << "The average score in your class was " << scoreAverage(studentScores[]);
+    cout << "Here's the following things you can see as a teacher: \n" << endl;
+    cout << "1) Average student scores" << endl;
+    cout << "2) Highest score" << endl;
+    cout << "3) Lowest score" << endl;
+    cout << "4) Above average scores" << endl;
 
-    cout << "The highest score in your class was " << highestScore(studentScores[]);
+    short input;
+    cout << "\nEnter a number to see your desired statistic -> ";
+    cin >> input;
 
-    cout << "The lowest score in your class was " << lowestScore(studentScores);
+    switch (input) {
+        case 1:
+            cout << "The average score in your class was " << scoreAverage(studentScores[]);
+            break;
 
-    cout << "Here's the student(s) in your class who scores above average: \n";
-    aboveAverage(studentScores[]);
+        case 2:
+            cout << "The highest score in your class was " << highestScore(studentScores[]);
+            break;
 
-    
+        case 3:
+            cout << "The lowest score in your class was " << lowestScore(studentScores);
+            break;
+
+        case 4:
+            cout << "Here's the student(s) in your class who scores above average: \n";
+            aboveAverage(studentScores[]);
+            break;
+
+        default:
+            cout << "You didn't enter a valid choice..try again."
+    }
+
     return 0;
 }
 
